@@ -4,9 +4,37 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login - BidRush</title>
+    <link rel="stylesheet" href="styles/style.css">
 </head>
 <body>
-    <h1>Login Page</h1>
-    <p>This is the login page. Content coming soon!</p>
+    <header>
+        <a href="index.html" class="home-button">
+            <img src="images/bidrush-logo.png" alt="BidRush Logo" class="header-logo">
+        </a>
+        <nav>
+            <ul class="nav-links">
+                <li><a href="live-auctions.html">Live Auctions</a></li>
+                <li><a href="login.html">Login</a></li>
+                <li><a href="signup.html">Sign Up</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section class="login-container">
+            <h2>Login to Your Account</h2>
+            <form action="dashboard.html" method="POST" class="login-form">
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" placeholder="Enter your email" required>
+                
+                <label for="password">Password:</label>
+                <input type="password" id="password" name="password" placeholder="Enter your password" required>
+                
+                <button type="submit" class="login-button">Login</button>
+            </form>
+            <p class="signup-prompt">
+                Don't have an account? <a href="signup.html">Sign Up</a>
+            </p>
+        </section>
+    </main>
 </body>
 </html>

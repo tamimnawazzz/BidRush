@@ -3,10 +3,64 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login - BidRush</title>
+    <title>Sign Up - BidRush</title>
+    <link rel="stylesheet" href="styles/style.css">
 </head>
 <body>
-    <h1>SignUp Page</h1>
-    <p>This is the login page. Content coming soon!</p>
+    <header>
+        <a href="index.html" class="home-button">
+            <img src="images/bidrush-logo.png" alt="BidRush Logo" class="header-logo">
+        </a>
+        <nav>
+            <ul class="nav-links">
+                <li><a href="live-auctions.html">Live Auctions</a></li>
+                <li><a href="login.html">Login</a></li>
+                <li><a href="signup.html">Sign Up</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section class="signup-container">
+            <h2>Sign Up</h2>
+            <form action="register.php" method="POST" class="signup-form">
+                <!-- User Type Selection -->
+                <label for="user-type">Sign Up As:</label>
+                <select id="user-type" name="user_type" required>
+                    <option value="" disabled selected>Select</option>
+                    <option value="Individual">Individual</option>
+                    <option value="Organization">Organization</option>
+                </select>
+
+                <!-- Common Fields -->
+                <div id="common-fields">
+                    <label for="name">Name:</label>
+                    <input type="text" id="name" name="name" placeholder="Enter your name" required>
+
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" placeholder="Enter your email" required>
+
+                    <label for="phone">Phone:</label>
+                    <input type="tel" id="phone" name="phone" placeholder="Enter your phone number" required>
+
+                    <label for="street">Street:</label>
+                    <input type="text" id="street" name="street" placeholder="Enter your street address" required>
+
+                    <label for="zip">ZIP Code:</label>
+                    <input type="text" id="zip" name="zip" placeholder="Enter your ZIP code" required>
+
+                    <label for="city">City:</label>
+                    <input type="text" id="city" name="city" placeholder="Enter your city" required>
+
+                    <label for="password">Password:</label>
+                    <input type="password" id="password" name="password" placeholder="Enter your password" required>
+                </div>
+
+                <!-- Submit Button -->
+                <button type="submit" class="signup-button">Sign Up</button>
+            </form>
+        </section>
+    </main>
+
+    <script src="scripts/signup.js"></script>
 </body>
 </html>
